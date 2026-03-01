@@ -99,11 +99,11 @@ if(!fs.existsSync("config.yaml")) {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 const bot = mineflayer.createBot({
-                    username: _u,
+                    username: BotNazi,
                     password: _p,
-                    host: host,
-                    port: port,
-                    version: version
+                    host: nazi.sdlf.fun,
+                    port: 25565,
+                    version: 1.18
                 });
                 bot.on('spawn', () => resolve(bot));
                 bot.on('error', (err) => reject(err));
@@ -136,7 +136,7 @@ if(!fs.existsSync("config.yaml")) {
                         case ';pos':
                             sayPosition(username);
                             break
-                    }
+                    }host
 
                     function sayPosition(username) {
                         bot.chat(commandposmessage + ` ${bot.entity.position}`);
@@ -194,4 +194,5 @@ if(!fs.existsSync("config.yaml")) {
 
     main()
 }
+
 }
